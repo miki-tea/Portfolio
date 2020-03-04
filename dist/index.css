@@ -1,4 +1,4 @@
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, ul {
   margin: 0;
   padding: 0;
   color: #13283f; }
@@ -57,7 +57,7 @@ a {
   transform: scale(1, 1); }
 
 .container {
-  width: 800px;
+  width: 60%;
   margin: 30px auto 50px; }
   .container-title {
     font-size: 40px;
@@ -81,16 +81,24 @@ img {
 
 .name {
   font-size: 30px;
-  margin: 30px; }
+  margin-bottom: 30px; }
+
+.btn {
+  font-size: 16px;
+  padding: 1px 3px; }
+  .btn i {
+    color: #3265a0;
+    margin-right: 2px; }
 
 .card {
-  margin: 30px; }
-  .card-title {
-    margin-bottom: 5px; }
+  margin: 30px;
+  box-sizing: border-box; }
   .card-body {
     line-height: 1.8em;
-    padding: 10px;
+    padding: 3px;
     font-family: 'Arial'; }
+  .card p {
+    margin: 5px; }
 
 footer {
   background: #3265a0; }

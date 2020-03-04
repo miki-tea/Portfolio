@@ -11,7 +11,7 @@ $fz-s: 25px;
 $fz-xs: 16px;
 
 
-body,h1,h2,h3,p,ul{
+body,h1,h2,h3,ul{
   margin: 0;
   padding: 0;
   color: darken($color-sub,40%);
@@ -78,7 +78,7 @@ a{
   }
 
 .container{
-  width: 800px;
+  width: 60%;
   margin: 30px auto 50px;
   &-title{
     font-size: $fz-l;
@@ -108,19 +108,32 @@ img{
 }
 .name{
   font-size: $fz-m;
-  margin: $space-m;
+  margin-bottom: $space-m;
+  // margin-left: $space-m;
 
+}
+.btn{
+  font-size: 16px;
+  padding: 1px 3px;
+  i{
+    color:darken($color-sub, 15%);  margin-right:2px;
+
+  }
 }
 .card{
   margin: $space-m;
+  box-sizing: border-box;
   &-title{
-    margin-bottom: 5px;
   }
   &-body{
     line-height: 1.8em;
-    padding: 10px;
+    padding: 3px;
     font-family: 'Arial';
   }
+  p{
+    margin: 5px;
+  }
+  
   
 }
 
