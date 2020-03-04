@@ -12,8 +12,12 @@
     "@babel/preset-env": "^7.8.6",
     "babel-loader": "^8.0.6",
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-stream": "^5.2.1"
