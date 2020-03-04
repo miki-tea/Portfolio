@@ -1,0 +1,136 @@
+$color-basic: #333;
+$color-sub: rgb(84, 139, 202);
+$space-m : 30px;
+$space-s : 20px;
+$header-height: 70px;
+
+$fz-xl: 50px;
+$fz-l: 40px;
+$fz-m: 30px;
+$fz-s: 25px;
+$fz-xs: 16px;
+
+
+body,h1,h2,h3,p,ul{
+  margin: 0;
+  padding: 0;
+  color: darken($color-sub,40%);
+}
+body{
+  font-family: 'Electrolize', sans-serif;
+  background:lighten($color-sub,40%);
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: $color-basic;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header{
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background:#fff;
+  box-shadow: 0 0 4px $color_sub;
+  .title {
+    color: darken($color-sub, 15%);
+    font-size: $fz-xl;
+    margin-left: $space_m;
+    line-height: $header-height;
+  }
+  .nav{
+    &-list {
+      margin-right: $space_m;
+      display: flex;
+      align-items: center;
+      height: $header-height;
+    }
+    &-item {
+        font-size: $fz-m;
+        padding: 20px 5px;
+        margin-left: 15px;
+      }
+    }
+  }
+.link{
+
+  color:darken($color-sub, 15%);
+}
+.link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    background: $color-sub;
+    height: 2px;
+    transition: all .5s;
+    transform: scale(0, 1);
+  }
+.link:hover::after {
+    transform: scale(1, 1);
+  }
+
+.container{
+  width: 800px;
+  margin: 30px auto 50px;
+  &-title{
+    font-size: $fz-l;
+    text-align: center;
+    margin-bottom: $space-m;
+  }
+  &-body{
+    font-family: 'Arial';
+  }
+  &-row{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-col2{
+    box-sizing: border-box;
+    // padding: 40px;
+  }
+}
+
+img{
+  width: 300px;
+}
+.icon{
+  width: 250px;
+  border-radius: 50px;
+  border: 4px darken($color-sub, 15%) solid;
+}
+.name{
+  font-size: $fz-m;
+  margin: $space-m;
+
+}
+.card{
+  margin: $space-m;
+  &-title{
+    margin-bottom: 5px;
+  }
+  &-body{
+    line-height: 1.8em;
+    padding: 10px;
+    font-family: 'Arial';
+  }
+  
+}
+
+footer{
+  background: darken($color-sub, 15%);
+  small{
+    display: block;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+  
