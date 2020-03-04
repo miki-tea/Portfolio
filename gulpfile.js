@@ -11,9 +11,9 @@ const minifyImg_GIF = require("imagemin-gifsicle");
 
 
 gulp.task("watch", () => {
-  return (gulp.watch("src/scss/**/*.scss", () => {
+  return (gulp.watch("src/scss/*.scss", () => {
     return (
-      gulp.src("src/scss/**/*.scss")
+      gulp.src("src/scss/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("dist"))
     );
