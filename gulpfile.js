@@ -10,14 +10,14 @@ gulp.task("watch", () => {
     return (
       gulp.src("src/scss/**/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist"))
     );
   }));
 });
 
 gulp.task("webpack", () => {
   return webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest("dist/js"));
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("default", gulp.series("webpack", "watch", function (done) {
