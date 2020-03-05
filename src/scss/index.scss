@@ -7,7 +7,7 @@ $header-height: 70px;
 $fz-xl: 50px;
 $fz-l: 40px;
 $fz-m: 30px;
-$fz-s: 25px;
+$fz-s: 20px;
 $fz-xs: 16px;
 
 
@@ -29,6 +29,10 @@ a{
   position: relative;
   display: inline-block;
   text-decoration: none;
+}
+th{
+  text-align: left;
+  padding: 0 10px 0 15px;
 }
 
 .header{
@@ -80,10 +84,17 @@ a{
 .container{
   width: 60%;
   margin: 30px auto 50px;
+  &-group-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+
   &-title{
     font-size: $fz-l;
     text-align: center;
     margin-bottom: $space-m;
+    position: relative;
+
   }
   &-body{
     font-family: 'Arial';
@@ -94,15 +105,14 @@ a{
   }
   &-col2{
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
     // padding: 40px;
   }
 }
 
-img{
-  width: 300px;
-}
 .icon{
-  width: 250px;
+  width: 200px;
   border-radius: 50px;
   border: 4px darken($color-sub, 15%) solid;
 }
@@ -120,15 +130,20 @@ img{
 
   }
 }
+.container-card{
+  margin-left: 10px;
+}
 .card{
-  margin: $space-m;
+  font-family: 'Arial';
   box-sizing: border-box;
+  line-height: 1.8em;
   &-title{
+    font-size: $fz-s;
+    margin-top: 18px;
+    margin-bottom: 10px;
   }
   &-body{
-    line-height: 1.8em;
-    padding: 3px;
-    font-family: 'Arial';
+    padding: 0 15px;
   }
   p{
     margin: 5px;
