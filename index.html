@@ -9,12 +9,19 @@
   <script src="https://kit.fontawesome.com/1010468d87.js" crossorigin="anonymous"></script>
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+  <!-- slick CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"
+    type="text/css">
+
   <link rel="stylesheet" href="dist/index.css">
 </head>
 
 <body>
   <!-- ヘッダー部分 -->
   <header class="header">
+
     <h1 class="title">Miki's Portfolio</h1>
     <nav class="nav">
       <ul class="nav-list">
@@ -31,20 +38,27 @@
       <h1 class="container-title">Works</h1>
       <div class="container-body">
         <h2>memopa!</h2>
-        <!-- <img src="dist/ss_pc1.png" alt="パソコンから見える画面">
-        <img src="dist/ss_sp1.png" alt="スマートフォンから見える画面">
-        <img src="dist/ss_sp2.png" alt="スマートフォンから見える画面"> -->
-        <h3>開発環境</h3>
-        <p>Mac OS</p>
-        <h3>制作背景</h3>
-        
-        <h3>機能</h3>
-        <ul>
-          <li>ユーザー登録/解除</li>
-          <li>メモ投稿/編集/削除</li>
-          <li>パスワードリマインダー</li>
-        </ul>
-        <h3>使用言語・ツール・ソフト</h3>
+        <div class="slider-box-width">
+          <ul class="slider">
+            <li><img src="dist/memopa1.png" alt="" class="slider-img"></li>
+            <li><img src="dist/memopa2.png" alt="" class="slider-img"></li>
+          </ul>
+        </div>
+        <table>
+          <tr>
+            <th>制作背景</th>
+            <td>phpの理解のため、フレームワークを使わずにphpのみで基本的なWEBサービス機能を実装したメモアプリと作りました。</td>
+          </tr>
+          <tr>
+            <th>機能</th>
+            <td>ユーザー登録/解除、メモ投稿/編集/削除、パスワードリマインダー</td>
+          </tr>
+          <tr>
+            <th>使用技術</th>
+            <td>php、HTML/CSS</td>
+          </tr>
+
+        </table>
       </div>
 
     </section>
@@ -199,6 +213,7 @@
   <footer>
     <small>(c)Miki 2020</small>
   </footer>
+  <script src="./dist/bundle.js"></script>
 </body>
 
 </html>
