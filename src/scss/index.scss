@@ -63,7 +63,6 @@ th{
     }
   }
 .link{
-
   color:darken($color-sub, 15%);
 }
 .link::after {
@@ -148,8 +147,6 @@ th{
   p{
     margin: 5px;
   }
-  
-  
 }
 
 footer{
@@ -161,4 +158,6 @@ footer{
   }
 }
 
-  
+.slider-img{
+  width: 100%;
+}
