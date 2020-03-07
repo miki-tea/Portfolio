@@ -1,24 +1,43 @@
 $color-basic: #333;
 $color-sub: rgb(84, 139, 202);
+$color-lighten: lighten($color-sub,40%);
+$color-darken: darken($color-sub,40%);
+$color-darken-light: darken($color-sub, 15%);
+
 $space-m : 30px;
 $space-s : 20px;
-$header-height: 70px;
+$header-height: 50px;
 
-$fz-xl: 50px;
-$fz-l: 40px;
-$fz-m: 30px;
-$fz-s: 20px;
-$fz-xs: 16px;
+$fz-xl: 40px;
+$fz-l: 30px;
+$fz-m: 20px;
+$fz-s: 16px;
+$fz-xs: 14px;
 
+// レスポンシブデザイン用変数
+$breakpoints: (
+  'sm': 'screen and (max-width: 414px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)'
+) !default;
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 
 body,h1,h2,h3,ul{
   margin: 0;
   padding: 0;
-  color: darken($color-sub,40%);
+  color: $color-darken;
 }
 body{
   font-family: 'Electrolize', sans-serif;
-  background:lighten($color-sub,40%);
+  background: $color-lighten;
+}
+main{
+  padding-top: $header-height;
 }
 li{
   list-style: none;
@@ -37,7 +56,22 @@ th{
   padding-bottom: 5px;
 }
 
+// .bg-darken{
+//   background: darken($color-sub, 15%);
+//   h1,h2,h3,p,li,a,th,td{
+//     color: #fff;
+//   }
+// }
+// .clearfix::after{
+//   content: '';
+//   display: block;
+//   clear: both;
+// }
 .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   height: $header-height;
   width: 100%;
   display: flex;
@@ -49,8 +83,15 @@ th{
     font-size: $fz-xl;
     margin-left: $space_m;
     line-height: $header-height;
+    @include mq(sm){
+      width: 100%;
+      text-align: center;
+    }
   }
   .nav{
+    @include mq(md) {
+      display: none;
+    }
     &-list {
       margin-right: $space_m;
       display: flex;
@@ -65,7 +106,7 @@ th{
     }
   }
 .link{
-  color:darken($color-sub, 15%);
+  color:$color-darken-light;
 }
 .link::after {
     position: absolute;
@@ -85,9 +126,15 @@ th{
 .container{
   width: 60%;
   margin: 30px auto 50px;
+  @include mq(md){
+    width: 100%;
+  }
   &-group-flex{
     display: flex;
     justify-content: space-between;
+    @include mq(sm){
+      display: block;
+    }
   }
 
   &-title{
@@ -95,6 +142,7 @@ th{
     text-align: center;
     margin-bottom: $space-m;
     position: relative;
+    color: $color-darken-light;
 
   }
   &-body{
@@ -114,8 +162,15 @@ th{
 
 .icon{
   width: 200px;
+  height: 200px;
   border-radius: 50px;
   border: 4px darken($color-sub, 15%) solid;
+  @include mq(sm){
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+
+  }
 }
 .name{
   font-size: $fz-m;
@@ -127,7 +182,7 @@ th{
   font-size: 16px;
   padding: 1px 3px;
   i{
-    color:darken($color-sub, 15%);  margin-right:2px;
+    color:$color-darken-light;  margin-right:2px;
 
   }
 }

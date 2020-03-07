@@ -7,6 +7,9 @@ body {
   font-family: 'Electrolize', sans-serif;
   background: #f0f5fa; }
 
+main {
+  padding-top: 50px; }
+
 li {
   list-style: none; }
 
@@ -24,7 +27,11 @@ th {
   padding-bottom: 5px; }
 
 .header {
-  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -32,16 +39,23 @@ th {
   box-shadow: 0 0 4px #548bca; }
   .header .title {
     color: #3265a0;
-    font-size: 50px;
+    font-size: 40px;
     margin-left: 30px;
-    line-height: 70px; }
+    line-height: 50px; }
+    @media screen and (max-width: 414px) {
+      .header .title {
+        width: 100%;
+        text-align: center; } }
+  @media screen and (max-width: 768px) {
+    .header .nav {
+      display: none; } }
   .header .nav-list {
     margin-right: 30px;
     display: flex;
     align-items: center;
-    height: 70px; }
+    height: 50px; }
   .header .nav-item {
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px 5px;
     margin-left: 15px; }
 
@@ -65,14 +79,21 @@ th {
 .container {
   width: 60%;
   margin: 30px auto 50px; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
   .container-group-flex {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 414px) {
+      .container-group-flex {
+        display: block; } }
   .container-title {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
-    position: relative; }
+    position: relative;
+    color: #3265a0; }
   .container-body {
     font-family: 'Arial'; }
   .container-row {
@@ -85,11 +106,17 @@ th {
 
 .icon {
   width: 200px;
+  height: 200px;
   border-radius: 50px;
   border: 4px #3265a0 solid; }
+  @media screen and (max-width: 414px) {
+    .icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 25px; } }
 
 .name {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 30px; }
 
 .btn {
@@ -107,7 +134,7 @@ th {
   box-sizing: border-box;
   line-height: 1.8em; }
   .card-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 18px;
     margin-bottom: 10px; }
   .card-body {
