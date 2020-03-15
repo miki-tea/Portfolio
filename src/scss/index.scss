@@ -34,7 +34,7 @@ body,h1,h2,h3,ul{
 }
 body{
   font-family: 'Electrolize', sans-serif;
-  background: $color-lighten;
+  background: #fff;
 }
 main{
   padding-top: $header-height;
@@ -76,13 +76,15 @@ th{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background:#fff;
-  box-shadow: 0 0 4px $color_sub;
+  background:$color-sub;
+  border-bottom: 2px solid $color-darken-light;
   .title {
-    color: darken($color-sub, 15%);
+    color: white;
     font-size: $fz-xl;
     margin-left: $space_m;
     line-height: $header-height;
+    position: relative;
+    top: 3px;
     @include mq(sm){
       width: 100%;
       text-align: center;
@@ -114,7 +116,7 @@ th{
     left: 0;
     content: '';
     width: 100%;
-    background: $color-sub;
+    background: $color-lighten;
     height: 2px;
     transition: all .5s;
     transform: scale(0, 1);

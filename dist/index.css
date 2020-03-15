@@ -5,7 +5,7 @@ body, h1, h2, h3, ul {
 
 body {
   font-family: 'Electrolize', sans-serif;
-  background: #f0f5fa; }
+  background: #fff; }
 
 main {
   padding-top: 50px; }
@@ -35,13 +35,15 @@ th {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: #fff;
-  box-shadow: 0 0 4px #548bca; }
+  background: #548bca;
+  border-bottom: 2px solid #3265a0; }
   .header .title {
-    color: #3265a0;
+    color: white;
     font-size: 40px;
     margin-left: 30px;
-    line-height: 50px; }
+    line-height: 50px;
+    position: relative;
+    top: 3px; }
     @media screen and (max-width: 414px) {
       .header .title {
         width: 100%;
@@ -68,7 +70,7 @@ th {
   left: 0;
   content: '';
   width: 100%;
-  background: #548bca;
+  background: #f0f5fa;
   height: 2px;
   transition: all .5s;
   transform: scale(0, 1); }
