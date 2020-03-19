@@ -1,12 +1,13 @@
 $color-basic: #333;
 $color-sub: rgb(84, 139, 202);
-$color-lighten: lighten($color-sub,40%);
-$color-darken: darken($color-sub,40%);
+$color-lighten: lighten($color-sub, 40%);
+$color-darken: darken($color-sub, 40%);
 $color-darken-light: darken($color-sub, 15%);
 
-$space-m : 30px;
-$space-s : 20px;
-$header-height: 50px;
+$space-m: 30px;
+$space-s: 20px;
+$space-xs: 10px;
+$header-height: 60px;
 
 $fz-xl: 40px;
 $fz-l: 30px;
@@ -16,9 +17,9 @@ $fz-xs: 14px;
 
 // レスポンシブデザイン用変数
 $breakpoints: (
-  'sm': 'screen and (max-width: 414px)',
-  'md': 'screen and (max-width: 768px)',
-  'lg': 'screen and (max-width: 1000px)'
+  "sm": "screen and (max-width: 414px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1000px)"
 ) !default;
 
 @mixin mq($breakpoint: lg) {
@@ -27,33 +28,40 @@ $breakpoints: (
   }
 }
 
-body,h1,h2,h3,ul{
+body,
+h1,
+h2,
+h3,
+ul {
   margin: 0;
   padding: 0;
   color: $color-darken;
 }
-body{
-  font-family: 'Electrolize', sans-serif;
+body {
+  font-family: "Merriweather", serif;
   background: #fff;
 }
-main{
+main {
   padding-top: $header-height;
 }
-li{
-  list-style: none;
-}
-a{
+// li {
+//   list-style: none;
+// }
+a {
   text-decoration: none;
   color: $color-basic;
   position: relative;
   display: inline-block;
   text-decoration: none;
 }
-th{
+th {
   text-align: left;
   padding-left: 15px;
   min-width: 180px;
   padding-bottom: 5px;
+}
+li {
+  list-style: none;
 }
 
 // .bg-darken{
@@ -67,7 +75,7 @@ th{
 //   display: block;
 //   clear: both;
 // }
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -75,22 +83,23 @@ th{
   height: $header-height;
   width: 100%;
   display: flex;
+  justify-content: center;
   justify-content: space-between;
-  background:$color-sub;
-  border-bottom: 2px solid $color-darken-light;
+  background: #fff;
+  box-shadow: 0 0px 7px #ccc;
   .title {
-    color: white;
+    color: $color-basic;
     font-size: $fz-xl;
     margin-left: $space_m;
     line-height: $header-height;
     position: relative;
     top: 3px;
-    @include mq(sm){
+    @include mq(sm) {
       width: 100%;
       text-align: center;
     }
   }
-  .nav{
+  .nav {
     @include mq(md) {
       display: none;
     }
@@ -101,122 +110,225 @@ th{
       height: $header-height;
     }
     &-item {
-        font-size: $fz-m;
-        padding: 20px 5px;
-        margin-left: 15px;
-      }
+      font-size: $fz-m;
+      padding: 20px 5px;
+      margin-left: 15px;
     }
   }
-.link{
-  color:$color-darken-light;
+}
+.link {
+  color: $color-basic;
 }
 .link::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    background: $color-lighten;
-    height: 2px;
-    transition: all .5s;
-    transform: scale(0, 1);
-  }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  background: $color-lighten;
+  height: 2px;
+  transition: all 0.5s;
+  transform: scale(0, 1);
+}
 .link:hover::after {
-    transform: scale(1, 1);
-  }
+  transform: scale(1, 1);
+}
 
-.container{
-  width: 60%;
-  margin: 30px auto 50px;
-  @include mq(md){
+.container {
+  width: 70%;
+  margin: 30px auto 90px;
+  @include mq(md) {
     width: 100%;
   }
-  &-group-flex{
+  &-group-flex {
     display: flex;
     justify-content: space-between;
-    @include mq(sm){
+    @include mq(sm) {
       display: block;
     }
   }
 
-  &-title{
-    font-size: $fz-l;
+  &-title {
+    font-size: $fz-xl;
     text-align: center;
     margin-bottom: $space-m;
     position: relative;
-    color: $color-darken-light;
-
+    color: $color-basic;
   }
-  &-body{
-    font-family: 'Arial';
+  &-body {
+    font-family: "Arial";
   }
-  &-row{
+  &-row {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    @include mq(sm) {
+      display: block;
+    }
   }
-  &-col2{
+  &-col2 {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    // padding: 40px;
+    padding-left: 40px;
+    @include mq(sm) {
+      padding: 0;
+    }
   }
 }
+.profile {
+  padding: 0 10px;
+  box-sizing: border-box;
+  &__link {
+    color: lighten($color: $color-basic, $amount: 30%);
+    transition: all 0.3s;
+    &:hover {
+      color: $color-basic;
+    }
+  }
+  &__icon {
+    width: 200px;
+    height: 200px;
+    // border-radius: 50px;
+    border: 3px solid $color-basic;
+    @include mq(sm) {
+      width: 100px;
+      height: 100px;
+      // border-radius: 25px;
+    }
+  }
+  // }
+  // .fa-github::before,
+  // .fa-twitter::before {
+  //   color: lighten($color: $color-basic, $amount: 30%);
+  //   transition: all 0.3s;
 
-.icon{
-  width: 200px;
-  height: 200px;
-  border-radius: 50px;
-  border: 4px darken($color-sub, 15%) solid;
-  @include mq(sm){
-    width: 100px;
-    height: 100px;
-    border-radius: 25px;
-
+  &:hover {
+    color: $color-basic;
   }
 }
-.name{
-  font-size: $fz-m;
-  margin-bottom: $space-m;
-  // margin-left: $space-m;
+.ornament {
+  position: relative;
 
+  &:after {
+    content: "";
+    width: 60%;
+    border-top: dashed 1px $color-basic;
+    position: absolute;
+    opacity: 0.3;
+    left: -10%;
+    bottom: -6px;
+    transform: translateX(50%);
+  }
 }
-.btn{
+.name {
+  font-size: $fz-l;
+  margin-bottom: 0.3em;
+  font-family: "Merriweather", serif;
+  &__works {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 10px;
+  }
+}
+.btn {
   font-size: 16px;
   padding: 1px 3px;
-  i{
-    color:$color-darken-light;  margin-right:2px;
+  transition: all 0.2s;
+  color: lighten($color: $color-basic, $amount: 30%);
 
+  &:hover {
+    color: $color-basic;
+  }
+  i {
+    margin-right: 2px;
   }
 }
-.container-card{
-  margin-left: 10px;
-}
-.card{
-  font-family: 'Arial';
+
+.card {
+  font-family: "Merriweather", serif;
   box-sizing: border-box;
   line-height: 1.8em;
-  &-title{
+  &-title {
     font-size: $fz-s;
     margin-top: 18px;
     margin-bottom: 10px;
+    padding: 0 8px;
+    border-bottom: 1px dashed rgba($color-basic, 0.3);
+    display: inline-block;
   }
-  &-body{
+  &-body {
     padding: 0 15px;
   }
-  p{
+  p {
     margin: 5px;
+    font-size: $fz-xs;
   }
 }
 
-footer{
-  background: darken($color-sub, 15%);
-  small{
+footer {
+  background: $color-basic;
+  small {
     display: block;
     color: #fff;
     text-align: center;
   }
 }
 
-.slider-img{
+.slider-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+table {
   width: 100%;
+  border-collapse: collapse;
+  border: solid 3px #333;
+}
+
+table tr {
+  border-bottom: solid 2px $color-basic;
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+table th {
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: white;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table th:after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -10px;
+  border-left: 10px solid $color-basic;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+table td {
+  text-align: left;
+  width: 70%;
+  background-color: #fff;
+  padding: 10px 0px 0 30px;
+}
+
+.works {
+  &__link {
+    display: block;
+    text-decoration: underline;
+    color: $color-sub;
+    word-break: break-all;
+  }
 }
