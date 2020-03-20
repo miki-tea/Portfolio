@@ -16,7 +16,7 @@ main {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #13283f;
   position: relative;
   display: inline-block;
   text-decoration: none; }
@@ -37,7 +37,7 @@ li {
   background: #fff;
   box-shadow: 0 0px 7px #ccc; }
   .header .title {
-    color: #333;
+    color: #13283f;
     font-size: 40px;
     margin-left: 30px;
     line-height: 60px;
@@ -63,7 +63,7 @@ li {
     margin-left: 15px; }
 
 .link {
-  color: #333; }
+  color: #13283f; }
 
 .link::after {
   position: absolute;
@@ -96,7 +96,7 @@ li {
     text-align: center;
     margin-bottom: 30px;
     position: relative;
-    color: #333; }
+    color: #13283f; }
   .container-body {
     font-family: "Arial"; }
   .container-row {
@@ -117,27 +117,27 @@ li {
   padding: 0 10px;
   box-sizing: border-box; }
   .profile__link {
-    color: gray;
+    color: #3871b3;
     transition: all 0.3s; }
     .profile__link:hover {
-      color: #333; }
+      color: #13283f; }
   .profile__icon {
     width: 200px;
     height: 200px;
-    border: 3px solid #333; }
+    border: 3px solid #13283f; }
     @media screen and (max-width: 425px) {
       .profile__icon {
         width: 100px;
         height: 100px; } }
   .profile:hover {
-    color: #333; }
+    color: #13283f; }
 
 .ornament {
   position: relative; }
   .ornament:after {
     content: "";
     width: 60%;
-    border-top: dashed 1px #333;
+    border-top: dashed 1px #13283f;
     position: absolute;
     opacity: 0.3;
     left: -10%;
@@ -157,9 +157,9 @@ li {
   font-size: 16px;
   padding: 1px 3px;
   transition: all 0.2s;
-  color: gray; }
+  color: #3871b3; }
   .btn:hover {
-    color: #333; }
+    color: #13283f; }
   .btn i {
     margin-right: 2px; }
 
@@ -167,21 +167,22 @@ li {
   box-sizing: border-box;
   line-height: 1.8em; }
   .card-title {
-    font-family: serif;
+    font-family: "Lora", serif;
     font-size: 16px;
     margin-top: 18px;
     margin-bottom: 10px;
     padding: 0 8px;
-    border-bottom: 1px dashed rgba(51, 51, 51, 0.3);
+    border-bottom: 1px dashed rgba(19, 40, 63, 0.3);
     display: inline-block; }
   .card-body {
-    padding: 0 15px; }
+    padding: 0 15px;
+    font-family: "Lora", serif; }
   .card p {
     margin: 5px;
     font-size: 14px; }
 
 footer {
-  background: #333; }
+  background: #13283f; }
   footer small {
     display: block;
     color: #fff;
@@ -195,10 +196,10 @@ footer {
 table {
   width: 100%;
   border-collapse: collapse;
-  border: solid 3px #333; }
+  border: solid 3px #13283f; }
 
 table tr {
-  border-bottom: solid 2px #333; }
+  border-bottom: solid 2px #13283f; }
 
 table tr:last-child {
   border-bottom: none; }
@@ -208,7 +209,7 @@ table th {
   text-align: left;
   width: 30%;
   background-color: white;
-  color: #333;
+  color: #13283f;
   text-align: center;
   padding: 10px 0; }
 
@@ -220,7 +221,7 @@ table th:after {
   position: absolute;
   top: calc(50% - 10px);
   right: -10px;
-  border-left: 10px solid #333;
+  border-left: 10px solid #13283f;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent; }
 

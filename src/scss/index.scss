@@ -1,4 +1,3 @@
-$color-basic: #333;
 $color-sub: rgb(84, 139, 202);
 $color-lighten: lighten($color-sub, 40%);
 $color-darken: darken($color-sub, 40%);
@@ -49,7 +48,7 @@ main {
 // }
 a {
   text-decoration: none;
-  color: $color-basic;
+  color: $color-darken;
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -83,7 +82,7 @@ li {
   background: #fff;
   box-shadow: 0 0px 7px #ccc;
   .title {
-    color: $color-basic;
+    color: $color-darken;
     font-size: $fz-xl;
     margin-left: $space_m;
     line-height: $header-height;
@@ -114,7 +113,7 @@ li {
   }
 }
 .link {
-  color: $color-basic;
+  color: $color-darken;
 }
 .link::after {
   position: absolute;
@@ -150,7 +149,7 @@ li {
     text-align: center;
     margin-bottom: $space-m;
     position: relative;
-    color: $color-basic;
+    color: $color-darken;
   }
   &-body {
     font-family: "Arial";
@@ -176,17 +175,17 @@ li {
   padding: 0 10px;
   box-sizing: border-box;
   &__link {
-    color: lighten($color: $color-basic, $amount: 30%);
+    color: lighten($color: $color-darken, $amount: 30%);
     transition: all 0.3s;
     &:hover {
-      color: $color-basic;
+      color: $color-darken;
     }
   }
   &__icon {
     width: 200px;
     height: 200px;
     // border-radius: 50px;
-    border: 3px solid $color-basic;
+    border: 3px solid $color-darken;
     @include mq(sm) {
       width: 100px;
       height: 100px;
@@ -196,11 +195,11 @@ li {
   // }
   // .fa-github::before,
   // .fa-twitter::before {
-  //   color: lighten($color: $color-basic, $amount: 30%);
+  //   color: lighten($color: $color-darken, $amount: 30%);
   //   transition: all 0.3s;
 
   &:hover {
-    color: $color-basic;
+    color: $color-darken;
   }
 }
 .ornament {
@@ -209,7 +208,7 @@ li {
   &:after {
     content: "";
     width: 60%;
-    border-top: dashed 1px $color-basic;
+    border-top: dashed 1px $color-darken;
     position: absolute;
     opacity: 0.3;
     left: -10%;
@@ -231,10 +230,10 @@ li {
   font-size: 16px;
   padding: 1px 3px;
   transition: all 0.2s;
-  color: lighten($color: $color-basic, $amount: 30%);
+  color: lighten($color: $color-darken, $amount: 30%);
 
   &:hover {
-    color: $color-basic;
+    color: $color-darken;
   }
   i {
     margin-right: 2px;
@@ -245,16 +244,17 @@ li {
   box-sizing: border-box;
   line-height: 1.8em;
   &-title {
-    font-family: serif;
+    font-family: "Lora", serif;
     font-size: $fz-s;
     margin-top: 18px;
     margin-bottom: 10px;
     padding: 0 8px;
-    border-bottom: 1px dashed rgba($color-basic, 0.3);
+    border-bottom: 1px dashed rgba($color-darken, 0.3);
     display: inline-block;
   }
   &-body {
     padding: 0 15px;
+    font-family: "Lora", serif;
   }
   p {
     margin: 5px;
@@ -263,7 +263,7 @@ li {
 }
 
 footer {
-  background: $color-basic;
+  background: $color-darken;
   small {
     display: block;
     color: #fff;
@@ -280,11 +280,11 @@ footer {
 table {
   width: 100%;
   border-collapse: collapse;
-  border: solid 3px #333;
+  border: solid 3px $color-darken;
 }
 
 table tr {
-  border-bottom: solid 2px $color-basic;
+  border-bottom: solid 2px $color-darken;
 }
 
 table tr:last-child {
@@ -296,7 +296,7 @@ table th {
   text-align: left;
   width: 30%;
   background-color: white;
-  color: #333;
+  color: $color-darken;
   text-align: center;
   padding: 10px 0;
 }
@@ -309,7 +309,7 @@ table th:after {
   position: absolute;
   top: calc(50% - 10px);
   right: -10px;
-  border-left: 10px solid $color-basic;
+  border-left: 10px solid $color-darken;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
