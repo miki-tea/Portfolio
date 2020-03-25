@@ -262,21 +262,21 @@ footer small {
   margin: 0 auto;
 }
 
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
   border: solid 3px #13283f;
 }
 
-table tr {
+.table__tr {
   border-bottom: solid 2px #13283f;
 }
 
-table tr:last-child {
+.table__tr:last-child {
   border-bottom: none;
 }
 
-table th {
+.table__th {
   position: relative;
   text-align: left;
   width: 30%;
@@ -286,7 +286,7 @@ table th {
   padding: 10px 0;
 }
 
-table th:after {
+.table__th:after {
   display: block;
   content: "";
   width: 0px;
@@ -299,11 +299,16 @@ table th:after {
   border-bottom: 10px solid transparent;
 }
 
-table td {
+.table__td {
   text-align: left;
-  width: 70%;
   background-color: #fff;
-  padding: 10px 0px 10px 30px;
+  padding: 10px 30px;
+}
+
+.table__flex {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
 }
 
 .works__link {
