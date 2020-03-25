@@ -36,20 +36,20 @@ li {
   justify-content: space-between;
   background: #fff;
   box-shadow: 0 0px 7px #ccc; }
-  .header .title {
+  .header__title {
     color: #13283f;
     font-size: 40px;
     margin-left: 30px;
     line-height: 60px;
     position: relative;
     top: 3px; }
-    @media screen and (max-width: 425px) {
-      .header .title {
+    @media screen and (max-width: 768px) {
+      .header__title {
         width: 100%;
         text-align: center;
         margin: 0;
         font-size: 35px; } }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     .header .nav {
       display: none; } }
   .header .nav-list {
@@ -236,3 +236,6 @@ table td {
   text-decoration: underline;
   color: #548bca;
   word-break: break-all; }
+
+.work {
+  margin-bottom: 50px; }

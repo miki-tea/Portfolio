@@ -81,14 +81,14 @@ li {
   justify-content: space-between;
   background: #fff;
   box-shadow: 0 0px 7px #ccc;
-  .title {
+  &__title {
     color: $color-darken;
     font-size: $fz-xl;
     margin-left: $space_m;
     line-height: $header-height;
     position: relative;
     top: 3px;
-    @include mq(sm) {
+    @include mq(md) {
       width: 100%;
       text-align: center;
       margin: 0;
@@ -96,7 +96,7 @@ li {
     }
   }
   .nav {
-    @include mq(sm) {
+    @include mq(md) {
       display: none;
     }
     &-list {
@@ -328,4 +328,8 @@ table td {
     color: $color-sub;
     word-break: break-all;
   }
+}
+
+.work {
+  margin-bottom: 50px;
 }
