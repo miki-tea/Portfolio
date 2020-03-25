@@ -58,17 +58,6 @@ li {
   list-style: none;
 }
 
-// .bg-darken{
-//   background: darken($color-sub, 15%);
-//   h1,h2,h3,p,li,a,th,td{
-//     color: #fff;
-//   }
-// }
-// .clearfix::after{
-//   content: '';
-//   display: block;
-//   clear: both;
-// }
 .header {
   position: fixed;
   top: 0;
@@ -77,7 +66,7 @@ li {
   height: $header-height;
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
   justify-content: space-between;
   background: #fff;
   box-shadow: 0 0px 7px #ccc;
@@ -92,25 +81,32 @@ li {
       width: 100%;
       text-align: center;
       margin: 0;
-      font-size: 35px;
+      // font-size: $fz-l;
+    }
+    @include mq(sm) {
+      font-size: $fz-l;
     }
   }
-  .nav {
-    @include mq(md) {
-      display: none;
-    }
-    &-list {
-      margin-right: $space_m;
-      display: flex;
-      align-items: center;
-      height: $header-height;
-    }
-    &-item {
-      font-size: $fz-m;
-      padding: 20px 5px;
-      margin-left: 15px;
-    }
+  &__toggle {
+    position: relative;
+    right: 15px;
   }
+  // .nav {
+  //   @include mq(md) {
+  //     display: none;
+  //   }
+  //   &-list {
+  //     margin-right: $space_m;
+  //     display: flex;
+  //     align-items: center;
+  //     height: $header-height;
+  //   }
+  //   &-item {
+  //     font-size: $fz-m;
+  //     padding: 20px 5px;
+  //     margin-left: 15px;
+  //   }
+  // }
 }
 .link {
   color: $color-darken;
@@ -323,13 +319,77 @@ table td {
 
 .works {
   &__link {
-    display: block;
-    text-decoration: underline;
-    color: $color-sub;
+    // display: block;
+    // text-decoration: underline;
+    // color: $color-sub;
     word-break: break-all;
+    // border-bottom: 2px solid $color-darken;
   }
 }
 
 .work {
   margin-bottom: 50px;
+}
+
+// ハンバーガーメニュー
+
+.toggle {
+  display: none;
+  @include mq(lg) {
+    display: block;
+    width: 1.75rem;
+    height: 1.5rem;
+    z-index: 3;
+  }
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-darken;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+    &:nth-child(1) {
+      top: 0;
+      &.show {
+        transform: translateY(11px) rotate(-45deg);
+      }
+    }
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      &.show {
+        opacity: 0;
+      }
+    }
+    &:nth-child(3) {
+      bottom: 0;
+      &.show {
+        transform: translateY(-11px) rotate(45deg);
+      }
+    }
+  }
+}
+.nav {
+  @include mq(lg) {
+    position: fixed;
+    top: 0;
+    right: -149px;
+    bottom: 0;
+    padding: 60px 1rem 0 1rem;
+    background-color: #fff;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    &.show {
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__li {
+    padding: 0.5rem 2rem 0.1rem 2rem;
+    border-bottom: 1px dashed $color-darken;
+  }
 }
