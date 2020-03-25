@@ -388,6 +388,20 @@ table td {
       visibility: visible;
     }
   }
+  &__cover {
+    display: none;
+    transition: opacity 0.5s, visibility 0.5s;
+    &.show {
+      display: block;
+      background: rgba($color-darken, 0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vh;
+      height: 100vh;
+      z-index: 1;
+    }
+  }
   &__li {
     padding: 0.5rem 2rem 0.1rem 2rem;
     border-bottom: 1px dashed $color-darken;

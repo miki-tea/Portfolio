@@ -12,7 +12,7 @@ $(function() {
     dots: true
   });
 
-  $(".header__toggle").on("click", function() {
-    $(".header__toggle, .nav, .toggle__icon, .nav__bg").toggleClass("show");
+  $(".header__toggle, .nav__cover").on("click", function() {
+    $(".header__toggle, .nav, .toggle__icon, .nav__cover").toggleClass("show");
   });
 });

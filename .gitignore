@@ -1,5 +1,6 @@
 node_modules
-
+src/scss/index.css
+src/scss/index.min.css
 src/img
 
 # Created by https://www.gitignore.io/api/node,macos,visualstudiocode
