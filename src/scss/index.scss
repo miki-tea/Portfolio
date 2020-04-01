@@ -113,13 +113,13 @@ li {
 }
 .link::after {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   content: "";
   width: 100%;
-  background: $color-lighten;
-  height: 2px;
-  transition: all 0.5s;
+  background: $color-darken;
+  height: 1px;
+  transition: all 0.3s;
   transform: scale(0, 1);
 }
 .link:hover::after {
@@ -399,8 +399,22 @@ footer {
       z-index: 1;
     }
   }
+  &__ul {
+    display: flex;
+    align-items: center;
+    @include mq(md) {
+      display: block;
+    }
+  }
   &__li {
-    padding: 0.5rem 2rem 0.1rem 2rem;
-    border-bottom: 1px dashed $color-darken;
+    padding: 0.3rem 2rem;
+    border-right: 1px solid $color-darken;
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+    @include mq(md) {
+      border-bottom: 1px dashed $color-darken;
+      border-right: none;
+    }
   }
 }

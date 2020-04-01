@@ -60,13 +60,13 @@ li {
 
 .link::after {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   content: "";
   width: 100%;
-  background: #f0f5fa;
-  height: 2px;
-  transition: all 0.5s;
+  background: #13283f;
+  height: 1px;
+  transition: all 0.3s;
   transform: scale(0, 1); }
 
 .link:hover::after {
@@ -289,6 +289,19 @@ footer {
     height: 100vh;
     z-index: 1; }
 
+.nav__ul {
+  display: flex;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .nav__ul {
+      display: block; } }
+
 .nav__li {
-  padding: 0.5rem 2rem 0.1rem 2rem;
-  border-bottom: 1px dashed #13283f; }
+  padding: 0.3rem 2rem;
+  border-right: 1px solid #13283f; }
+  .nav__li:nth-last-child(1) {
+    border-right: none; }
+  @media screen and (max-width: 768px) {
+    .nav__li {
+      border-bottom: 1px dashed #13283f;
+      border-right: none; } }
