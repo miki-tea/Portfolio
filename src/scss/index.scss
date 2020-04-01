@@ -234,6 +234,60 @@ li {
   i {
     margin-right: 2px;
   }
+  &__scroll {
+    position: fixed;
+    bottom: -50px;
+    right: 20px;
+    font-size: 30px;
+    margin: 0;
+    transition: 0.5s all;
+    // position: relative;
+    @include mq(sm) {
+      bottom: 10px;
+      right: 10px;
+    }
+    &.js-scrollIn {
+      bottom: 25px;
+      @include mq(sm) {
+        bottom: 15px;
+        right: 5px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $color-darken;
+    // background: rgba(0, 0, 0, 0);
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid $color-darken;
+    outline: none;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    // transition: 0.5s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    // position: absolute;
+    top: 5px;
+    @include mq(sm) {
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+    }
+    &:hover {
+      text-decoration: none;
+      background-color: lighten($color-darken, 20%);
+      border: 1px solid$color-darken;
+      background: $color-darken;
+      color: #fff;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .card {
@@ -418,3 +472,7 @@ footer {
     }
   }
 }
+
+// js用スタイル
+
+//スクロールトップボタン
